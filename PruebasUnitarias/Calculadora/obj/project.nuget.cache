@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "p1+U5bRRcak=",
+  "success": true,
+  "projectFilePath": "/workspaces/MateriaC-/PruebasUnitarias/Calculadora/Calculadora.csproj",
+  "expectedPackageFiles": [
+    "/home/codespace/.nuget/packages/microsoft.netcore.app.ref/8.0.25/microsoft.netcore.app.ref.8.0.25.nupkg.sha512",
+    "/home/codespace/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.25/microsoft.aspnetcore.app.ref.8.0.25.nupkg.sha512"
+  ],
+  "logs": []
+}

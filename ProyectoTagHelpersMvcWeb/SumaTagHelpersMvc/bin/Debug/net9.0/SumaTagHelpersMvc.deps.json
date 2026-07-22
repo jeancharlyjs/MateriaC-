@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "SumaTagHelpersMvc/1.0.0": {
+        "runtime": {
+          "SumaTagHelpersMvc.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "SumaTagHelpersMvc/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
