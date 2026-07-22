@@ -1,0 +1,36 @@
+@model SumaViewModel
+
+@{
+    ViewData["Title"] = "Suma de dos numeros";
+}
+
+<section class="calculator">
+    <div class="calculator-panel">
+        <div class="panel-heading">
+            <h1>Suma de dos numeros</h1>
+            <p>Ingrese dos valores y pulse calcular para ver el resultado.</p>
+        </div>
+
+        <form asp-action="Index" method="post" class="sum-form">
+            <div asp-validation-summary="ModelOnly" class="validation-summary"></div>
+
+            <label asp-for="Numero1"></label>
+            <input asp-for="Numero1" type="number" step="any" />
+            <span asp-validation-for="Numero1" class="validation-message"></span>
+
+            <label asp-for="Numero2"></label>
+            <input asp-for="Numero2" type="number" step="any" />
+            <span asp-validation-for="Numero2" class="validation-message"></span>
+
+            <button type="submit">Calcular suma</button>
+        </form>
+
+        @if (Model.Resultado.HasValue)
+        {
+            <div class="result-box">
+                <span>Resultado</span>
+                <strong>@Model.Resultado.Value</strong>
+            </div>
+        }
+    </div>
+</section>

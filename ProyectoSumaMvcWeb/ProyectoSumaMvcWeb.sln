@@ -1,0 +1,23 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SumaMvcWeb", "SumaMvcWeb\SumaMvcWeb.csproj", "{D9E68A60-7E97-4B45-BE63-9858D44F75EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SumaMvcWeb.Tests", "SumaMvcWeb.Tests\SumaMvcWeb.Tests.csproj", "{EA6A2AD9-03E2-449E-84BB-F301FAD9E1BC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D9E68A60-7E97-4B45-BE63-9858D44F75EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9E68A60-7E97-4B45-BE63-9858D44F75EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9E68A60-7E97-4B45-BE63-9858D44F75EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9E68A60-7E97-4B45-BE63-9858D44F75EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA6A2AD9-03E2-449E-84BB-F301FAD9E1BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA6A2AD9-03E2-449E-84BB-F301FAD9E1BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA6A2AD9-03E2-449E-84BB-F301FAD9E1BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA6A2AD9-03E2-449E-84BB-F301FAD9E1BC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
