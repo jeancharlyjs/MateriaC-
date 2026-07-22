@@ -1,0 +1,55 @@
+@model SumaTagHelpersViewModel
+
+@{
+    ViewData["Title"] = "Proyecto MVC con Tag Helpers";
+}
+
+<section class="calculator">
+    <div class="calculator-panel">
+        <div class="panel-heading">
+            <img src="~/images/taghelpers-logo.svg" asp-append-version="true" alt="ASP.NET Tag Helpers" class="logo" />
+            <h1>Proyecto MVC con Tag Helpers</h1>
+            <p>Ingrese dos numeros, seleccione la operacion y calcule el resultado usando controles enlazados al modelo.</p>
+        </div>
+
+        <form asp-controller="Home" asp-action="Index" method="post" class="sum-form">
+            <div asp-validation-summary="All" class="validation-summary"></div>
+
+            <label asp-for="Numero1"></label>
+            <input asp-for="Numero1" type="number" step="any" />
+            <span asp-validation-for="Numero1" class="validation-message"></span>
+
+            <label asp-for="Numero2"></label>
+            <input asp-for="Numero2" type="number" step="any" />
+            <span asp-validation-for="Numero2" class="validation-message"></span>
+
+            <label asp-for="Operacion"></label>
+            <select asp-for="Operacion" asp-items="Model.Operaciones"></select>
+            <span asp-validation-for="Operacion" class="validation-message"></span>
+
+            <label asp-for="Observacion"></label>
+            <textarea asp-for="Observacion" rows="3"></textarea>
+            <span asp-validation-for="Observacion" class="validation-message"></span>
+
+            <boton-accion texto="Calcular suma" tipo="submit"></boton-accion>
+        </form>
+
+        @if (Model.Resultado.HasValue)
+        {
+            <div class="result-box">
+                <span>Resultado</span>
+                <strong>@Model.Resultado.Value</strong>
+            </div>
+        }
+
+        <div class="actions">
+            <a asp-controller="Home" asp-action="Index">Limpiar formulario</a>
+        </div>
+
+        <partial name="_ResumenTagHelpers" model="Model" />
+
+        <cache expires-after="@TimeSpan.FromMinutes(5)">
+            <p class="cache-note">Contenido cacheado por 5 minutos usando Cache Tag Helper.</p>
+        </cache>
+    </div>
+</section>
