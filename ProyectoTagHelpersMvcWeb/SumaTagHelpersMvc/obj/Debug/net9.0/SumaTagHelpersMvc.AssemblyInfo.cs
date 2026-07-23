@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SumaTagHelpersMvc")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2ee1bc8c5e90b62a7d85adfb5210ee6c486948b1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dcb2ff3a5381a95239d17476dbb53848bdced7ce")]
 [assembly: System.Reflection.AssemblyProductAttribute("SumaTagHelpersMvc")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SumaTagHelpersMvc")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

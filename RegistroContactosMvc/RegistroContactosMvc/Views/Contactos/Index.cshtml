@@ -1,0 +1,63 @@
+@model IEnumerable<Contacto>
+
+@{
+    ViewData["Title"] = "Contactos";
+}
+
+<section class="section-header">
+    <div>
+        <span class="eyebrow">Base de datos SQLite</span>
+        <h1>Registro de contactos</h1>
+        <p>Visualizacion de datos usando Razor, MVC Core y Entity Framework Core.</p>
+    </div>
+    <a class="button primary" asp-action="Create">Agregar contacto</a>
+</section>
+
+<section class="toolbar">
+    <form asp-action="Index" method="get" class="search-form">
+        <input type="search" name="buscar" value="@ViewBag.Buscar" placeholder="Buscar por nombre, telefono, correo o ciudad" />
+        <button type="submit">Buscar</button>
+        <a asp-action="Index">Limpiar</a>
+    </form>
+</section>
+
+<section class="table-shell">
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Telefono</th>
+                <th>Correo</th>
+                <th>Ciudad</th>
+                <th>Fecha</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+        @foreach (var contacto in Model)
+        {
+            <tr>
+                <td>@contacto.Nombre</td>
+                <td>@contacto.Telefono</td>
+                <td>@contacto.Correo</td>
+                <td>@contacto.Ciudad</td>
+                <td>@contacto.FechaRegistro.ToString("dd/MM/yyyy")</td>
+                <td class="actions">
+                    <a asp-action="Details" asp-route-id="@contacto.Id">Ver</a>
+                    <a asp-action="Edit" asp-route-id="@contacto.Id">Editar</a>
+                    <a asp-action="Delete" asp-route-id="@contacto.Id">Eliminar</a>
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+</section>
+
+@if (!Model.Any())
+{
+    <div class="empty-state">
+        <h2>No hay contactos registrados</h2>
+        <p>Agrega el primer contacto para comenzar a guardar datos en la base de datos.</p>
+        <a class="button primary" asp-action="Create">Crear contacto</a>
+    </div>
+}

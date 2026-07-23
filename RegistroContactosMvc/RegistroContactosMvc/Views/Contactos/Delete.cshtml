@@ -1,0 +1,38 @@
+@model Contacto
+
+@{
+    ViewData["Title"] = "Eliminar contacto";
+}
+
+<section class="detail-page danger-zone">
+    <div class="form-heading">
+        <span class="eyebrow">Confirmacion</span>
+        <h1>Eliminar contacto</h1>
+        <p>Esta accion eliminara el registro seleccionado de la base de datos.</p>
+    </div>
+
+    <div class="detail-grid">
+        <div>
+            <span>Nombre</span>
+            <strong>@Model.Nombre</strong>
+        </div>
+        <div>
+            <span>Telefono</span>
+            <strong>@Model.Telefono</strong>
+        </div>
+        <div>
+            <span>Correo</span>
+            <strong>@Model.Correo</strong>
+        </div>
+        <div>
+            <span>Ciudad</span>
+            <strong>@Model.Ciudad</strong>
+        </div>
+    </div>
+
+    <form asp-action="Delete" method="post" class="form-actions">
+        <input type="hidden" asp-for="Id" />
+        <button type="submit" class="button danger">Eliminar</button>
+        <a class="button secondary" asp-action="Index">Cancelar</a>
+    </form>
+</section>

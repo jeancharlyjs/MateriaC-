@@ -1,0 +1,37 @@
+@model Contacto
+
+@{
+    ViewData["Title"] = "Detalle";
+}
+
+<section class="detail-page">
+    <div class="form-heading">
+        <span class="eyebrow">Detalle del registro</span>
+        <h1>@Model.Nombre</h1>
+        <p>Informacion almacenada en la base de datos.</p>
+    </div>
+
+    <div class="detail-grid">
+        <div>
+            <span>Telefono</span>
+            <strong>@Model.Telefono</strong>
+        </div>
+        <div>
+            <span>Correo</span>
+            <strong>@Model.Correo</strong>
+        </div>
+        <div>
+            <span>Ciudad</span>
+            <strong>@Model.Ciudad</strong>
+        </div>
+        <div>
+            <span>Fecha de registro</span>
+            <strong>@Model.FechaRegistro.ToString("dd/MM/yyyy")</strong>
+        </div>
+    </div>
+
+    <div class="form-actions">
+        <a class="button primary" asp-action="Edit" asp-route-id="@Model.Id">Editar</a>
+        <a class="button secondary" asp-action="Index">Volver</a>
+    </div>
+</section>

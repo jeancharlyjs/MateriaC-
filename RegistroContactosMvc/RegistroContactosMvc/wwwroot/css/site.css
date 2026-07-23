@@ -1,0 +1,299 @@
+:root {
+    color-scheme: light;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f6f8;
+    color: #1f2933;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: #f4f6f8;
+}
+
+a {
+    color: inherit;
+}
+
+.topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 18px 6vw;
+    background: #ffffff;
+    border-bottom: 1px solid #d9e2ec;
+}
+
+.brand {
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: none;
+    color: #102a43;
+}
+
+.topbar nav {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.topbar nav a {
+    color: #334e68;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.page {
+    width: min(1120px, 92vw);
+    margin: 0 auto;
+    padding: 36px 0 56px;
+}
+
+.section-header,
+.form-heading {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 24px;
+}
+
+.section-header h1,
+.form-heading h1 {
+    margin: 6px 0 8px;
+    color: #102a43;
+    font-size: 34px;
+}
+
+.section-header p,
+.form-heading p {
+    margin: 0;
+    color: #52606d;
+}
+
+.eyebrow {
+    color: #0b7285;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0;
+    text-transform: uppercase;
+}
+
+.button,
+button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 42px;
+    padding: 10px 16px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.button.primary,
+button {
+    color: #ffffff;
+    background: #0b7285;
+}
+
+.button.secondary {
+    color: #334e68;
+    background: #ffffff;
+    border-color: #bcccdc;
+}
+
+.button.danger {
+    color: #ffffff;
+    background: #c92a2a;
+}
+
+.toolbar,
+.table-shell,
+.contact-form,
+.detail-page,
+.empty-state {
+    background: #ffffff;
+    border: 1px solid #d9e2ec;
+    border-radius: 8px;
+}
+
+.toolbar {
+    padding: 16px;
+    margin-bottom: 18px;
+}
+
+.search-form {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto auto;
+    gap: 12px;
+    align-items: center;
+}
+
+input {
+    width: 100%;
+    min-height: 42px;
+    padding: 10px 12px;
+    border: 1px solid #bcccdc;
+    border-radius: 8px;
+    font: inherit;
+    color: #102a43;
+    background: #ffffff;
+}
+
+input:focus {
+    outline: 3px solid #c6f6fa;
+    border-color: #0b7285;
+}
+
+.search-form a {
+    color: #0b7285;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.table-shell {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 14px 16px;
+    text-align: left;
+    border-bottom: 1px solid #e6edf3;
+    white-space: nowrap;
+}
+
+th {
+    background: #f8fafc;
+    color: #334e68;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+}
+
+.actions a {
+    color: #0b7285;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.form-page,
+.detail-page {
+    max-width: 760px;
+}
+
+.form-heading {
+    display: block;
+}
+
+.contact-form,
+.detail-page,
+.empty-state {
+    padding: 24px;
+}
+
+.field {
+    display: grid;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.field label {
+    color: #334e68;
+    font-weight: 700;
+}
+
+.field span,
+.validation {
+    color: #c92a2a;
+    font-size: 14px;
+}
+
+.form-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 22px;
+}
+
+.detail-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.detail-grid div {
+    padding: 16px;
+    background: #f8fafc;
+    border: 1px solid #e6edf3;
+    border-radius: 8px;
+}
+
+.detail-grid span {
+    display: block;
+    margin-bottom: 6px;
+    color: #627d98;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.detail-grid strong {
+    color: #102a43;
+}
+
+.danger-zone {
+    border-color: #ffd8d8;
+}
+
+.empty-state {
+    margin-top: 18px;
+    text-align: center;
+}
+
+.empty-state h2 {
+    margin: 0 0 8px;
+    color: #102a43;
+}
+
+.empty-state p {
+    margin: 0 0 18px;
+    color: #52606d;
+}
+
+@media (max-width: 720px) {
+    .topbar,
+    .section-header,
+    .search-form {
+        grid-template-columns: 1fr;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .section-header h1,
+    .form-heading h1 {
+        font-size: 28px;
+    }
+
+    .detail-grid {
+        grid-template-columns: 1fr;
+    }
+}
